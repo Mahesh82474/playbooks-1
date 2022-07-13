@@ -1,0 +1,23 @@
+---
+- hosts: all
+  tasks:
+   - name: creat directorys with permission
+     file:
+        path: /opt/{{item}}
+        state: directory
+        owner: root
+        mode: u=rwx,g=rx,o=x
+     with_items:
+      - klu
+      - web
+      - net
+
+
+
+
+
+
+
+
+
+
