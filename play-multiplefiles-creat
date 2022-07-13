@@ -1,0 +1,11 @@
+---
+- hosts: all
+  tasks:
+    - name: creating multiplefiles at a time
+      file:
+        path: /opt/{{item}}
+        state: touch
+      with_items:
+      - asd
+      - est
+      - rtd
